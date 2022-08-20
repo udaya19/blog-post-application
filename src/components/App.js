@@ -1,0 +1,22 @@
+// import {Switch,Route} from 'react-router-dom';
+// import { BrowserRouter as  Switch, Route } from 'react-router-dom';
+// import {NavBar,Home,CreatePost,PostDetail} from './index';
+import { Routes, Route } from "react-router-dom";
+import NavBar from './NavBar';
+import Home from './Home';
+import CreatePost from './CreatePost';
+import PostDetail from './PostDetail';
+function App() {
+  return (
+    <div className="container">
+      <NavBar />
+      <Routes>
+        <Route path = '/' element = {<Home />} />
+        <Route path = '/post/:postId' element = {<PostDetail />} />
+        <Route path = '/create-post' element = {<CreatePost />} />
+      </Routes>
+    </div>
+  );
+}
+
+export default App;
